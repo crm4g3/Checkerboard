@@ -96,9 +96,9 @@ public class FXMLBoardController implements Initializable, Startable {
         anchorPane.getChildren().clear();
         
         if(isDefaultColor == true){
-        board = new CheckerBoardMaker(numRows, numCols, stage.getWidth(), stage.getHeight() -59);
+        board = new CheckerBoardMaker(numRows, numCols, stage.getWidth(), stage.getHeight() -55);
         }else{
-            board = new CheckerBoardMaker(numRows, numCols, stage.getWidth(), stage.getHeight() -59, Color.SKYBLUE,Color.DARKBLUE);
+            board = new CheckerBoardMaker(numRows, numCols, stage.getWidth(), stage.getHeight() -55, Color.SKYBLUE,Color.DARKBLUE);
         }
         
         AnchorPane temp = board.build();
