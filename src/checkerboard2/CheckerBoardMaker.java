@@ -21,6 +21,8 @@ public class CheckerBoardMaker {
     private int numCols;
     private double anchorWidth;
     private double anchorHeight;
+    private double rectWidth;
+    private double rectHeight;
     private Color lightColor;
     private Color darkColor;
 
@@ -41,8 +43,8 @@ public class CheckerBoardMaker {
     
     public AnchorPane build(){
         System.out.println("anchorWidth: " + anchorWidth + " anchorHeight: " + anchorHeight);
-        double rectWidth = Math.ceil(anchorWidth / numCols);
-        double rectHeight = Math.ceil(anchorHeight / numRows);
+        rectWidth = Math.ceil(anchorWidth / numCols);
+        rectHeight = Math.ceil(anchorHeight / numRows);
         double x = 0;
         double y = 0;
         
@@ -80,11 +82,11 @@ public class CheckerBoardMaker {
     public int getNumRows(){return numRows;};
     public int getNumCols(){return numCols;};
     
-    public void getWidth(){};
-    public void getHeight(){};
-    public void getLightColor(){};
-    public void getDarkColor(){};
-    public void getRectangleWidth(){};
-    public void getRectangleHeight(){};
+    public double getWidth(){return anchorWidth;};
+    public double getHeight(){return anchorHeight;};
+    public Color getLightColor(){return lightColor;};
+    public Color getDarkColor(){return darkColor;};
+    public Double getRectangleWidth(){return rectWidth;};
+    public Double getRectangleHeight(){return rectHeight;};
 
 }
